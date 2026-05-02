@@ -1,1 +1,163 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Master — Privacy Policy</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon-16.png">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0f;
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.7;
+            padding: 48px 24px 80px;
+        }
+
+        .wrap {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+
+        .logo-text {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .logo-text span { color: #f59e0b; }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .updated {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.35);
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #f59e0b;
+            margin: 36px 0 12px;
+        }
+
+        p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 14px;
+        }
+
+        ul {
+            margin: 0 0 14px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 6px;
+        }
+
+        .divider {
+            height: 0.5px;
+            background: rgba(255, 255, 255, 0.08);
+            margin: 40px 0;
+        }
+
+        a {
+            color: #f59e0b;
+            text-decoration: none;
+        }
+
+        a:hover { text-decoration: underline; }
+
+        footer {
+            margin-top: 56px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.25);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <img src="icon-128.png" width="32" height="32" alt="Prompt Master">
+            <span class="logo-text">Prompt <span>Master</span></span>
+        </header>
+
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: May 2026</p>
+
+        <p>Prompt Master is a Chrome extension that scores and expands AI prompts in real time. This policy explains exactly what data the extension touches, where it goes, and what you control.</p>
+
+        <div class="divider"></div>
+
+        <h2>What data is collected</h2>
+        <p>Prompt Master reads the text you type into AI chat platforms (ChatGPT, Claude, Gemini) solely to score and expand your prompts. This text is processed locally in your browser and, when you click the Magic Wand, sent to the AI provider you have configured.</p>
+        <p>We do not collect, store, or transmit any prompt text to our own servers. We have no servers.</p>
+
+        <h2>Where your data goes</h2>
+        <p>When you use the Magic Wand expansion feature, your prompt is sent directly from your browser to the API endpoint of the provider you selected in Settings:</p>
+        <ul>
+            <li><strong>Groq</strong> — sent to <code style="color:rgba(255,255,255,0.55);font-size:13px">api.groq.com</code> using your own API key</li>
+        </ul>
+        <p>Your prompt travels directly from your browser to the provider. Prompt Master sits in the middle only to format the request — it does not log, cache, or forward your data.</p>
+        <p>Each provider's own privacy policy governs how they handle requests. Groq's policy is available at <a href="https://groq.com/privacy-policy/" target="_blank" rel="noopener">groq.com/privacy-policy</a>.</p>
+
+        <h2>What is stored locally</h2>
+        <p>Prompt Master stores the following in <code style="color:rgba(255,255,255,0.55);font-size:13px">chrome.storage.sync</code>, which is synced to your signed-in Google account across devices:</p>
+        <ul>
+            <li>Your API key for the configured provider</li>
+            <li>Your preferences (automatic linting on/off)</li>
+        </ul>
+        <p>This data never leaves your Google account sync. Prompt Master cannot read it from any server — only the extension itself, running in your browser, can access it.</p>
+
+        <h2>Your control</h2>
+        <p>You can remove all stored data at any time:</p>
+        <ul>
+            <li>Open Prompt Master Settings → Engine → clear the API key field → Save</li>
+            <li>Or uninstall the extension — Chrome removes all associated storage on uninstall</li>
+        </ul>
+
+        <h2>Permissions</h2>
+        <p>Prompt Master requests the following Chrome permissions:</p>
+        <ul>
+            <li><strong>storage</strong> — to save your API key and preferences locally</li>
+            <li><strong>activeTab</strong> — to inject the linter UI into the active AI chat tab</li>
+            <li><strong>Host access</strong> to chatgpt.com, claude.ai, gemini.google.com, and api.groq.com — to detect the chat input and send expansion requests</li>
+        </ul>
+        <p>No other permissions are requested or used.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>If this policy changes materially, the "Last updated" date above will reflect the change. Continued use of the extension after an update constitutes acceptance.</p>
+
+        <div class="divider"></div>
+
+        <footer>
+            Prompt Master is built by <a href="https://masss.dev" target="_blank" rel="noopener">MASSS</a>.
+            This extension has no affiliation with ChatGPT, Claude, Gemini, or Groq.
+        </footer>
+    </div>
+</body>
+</html>
